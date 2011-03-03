@@ -3,7 +3,7 @@
  * Currency aznrates model.
  *
  * @author		Nihad Abbasov <mail@narkoz.me>
- * @copyright	Copyright (c) 2010, Nihad Abbasov
+ * @copyright	Copyright (c) 2010-2011, Nihad Abbasov
  * @license		http://creativecommons.org/licenses/BSD/ New BSD License
  */
 class Model_Currency extends Model {
@@ -12,7 +12,7 @@ class Model_Currency extends Model {
 	 * Parsing and formatting data from CBR (cbr.ru)
 	 *
      * @param string $date date formatted as dd.mm.yyyy
-     * @return string
+     * @return array
      */
     public function get_currency_from_server($date)
     {
@@ -33,17 +33,23 @@ class Model_Currency extends Model {
 		$AZN = $currency[0];
 		$RUR = round(1/$AZN, 4);
 		$USD = round($currency[1]/$AZN, 4);
-		$EUR = round($currency[2]/$AZN, 4);
-		$AUD = round($currency[2]/$AZN, 4);
-		$JPY = round($currency[2]/$AZN, 4);
-		$GBP = round($currency[2]/$AZN, 4);
-		$BYR = round($currency[2]/$AZN, 4);
-		$LVL = round($currency[2]/$AZN, 4);
-		$TRY = round($currency[2]/$AZN, 4);
-		$UAH = round($currency[2]/$AZN, 4);
-		$EEK = round($currency[2]/$AZN, 4);
+		$EUR = $AUD = $JPY = $GBP = $BYR = $LVL = $TRY = $UAH = $EEK = round($currency[2]/$AZN, 4);
+		$AZN = $AZN/$AZN;
 
-		$rates = array("AZN" => $AZN/$AZN, "RUR" => $RUR, "USD" => $USD, "EUR" => $EUR, "AUD" => $AUD, "JPY" => $JPY, "GBP" => $GBP, "BYR" => $BYR, "LVL" => $LVL, "TRY" => $TRY, "UAH" => $UAH, "EEK" => $EEK);
+		$rates = array(
+				"AZN" => $AZN,
+				"RUR" => $RUR,
+				"USD" => $USD,
+				"EUR" => $EUR,
+				"AUD" => $AUD,
+				"JPY" => $JPY,
+				"GBP" => $GBP,
+				"BYR" => $BYR,
+				"LVL" => $LVL,
+				"TRY" => $TRY,
+				"UAH" => $UAH,
+				"EEK" => $EEK,
+			);
 		return $rates;
 
     }

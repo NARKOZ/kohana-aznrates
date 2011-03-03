@@ -3,7 +3,7 @@
  * Currency aznrates controller.
  *
  * @author		Nihad Abbasov <mail@narkoz.me>
- * @copyright	Copyright (c) 2010, Nihad Abbasov
+ * @copyright	Copyright (c) 2010-2011, Nihad Abbasov
  * @license		http://creativecommons.org/licenses/BSD/ New BSD License
  */
 class Controller_Currency extends Controller {
