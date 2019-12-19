@@ -2,7 +2,7 @@
 /**
  * Currency aznrates controller.
  *
- * @author		Nihad Abbasov <mail@narkoz.me>
+ * @author		Nihad Abbasov <nihad@42na.in>
  * @copyright	Copyright (c) 2010-2011, Nihad Abbasov
  * @license		http://creativecommons.org/licenses/BSD/ New BSD License
  */

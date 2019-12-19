@@ -2,8 +2,8 @@
 /**
  * Currency aznrates model.
  *
- * @author		Nihad Abbasov <mail@narkoz.me>
- * @copyright	Copyright (c) 2010-2011, Nihad Abbasov
+ * @author		Nihad Abbasov <nihad@42na.in>
+ * @copyright	Copyright (c) 2010-2019, Nihad Abbasov
  * @license		http://creativecommons.org/licenses/BSD/ New BSD License
  */
 class Model_Currency extends Model {
